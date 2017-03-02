@@ -8,4 +8,4 @@ Some technical details and discussions for this project can be found in the [wri
 
 An example of the output can be found on YouTube:
 
-[![Output example](https://img.youtube.com/vi/lRov_Yi5znk/0.jpg)](https://www.youtube.com/watch?v=lRov_Yi5znk)
+[![Output example](https://img.youtube.com/vi/6kVh1F_uIA4/0.jpg)](https://www.youtube.com/watch?v=6kVh1F_uIA4)
