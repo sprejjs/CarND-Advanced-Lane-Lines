@@ -70,7 +70,7 @@ Example output:
 
 #### 5. Having identified the lane lines, has the radius of curvature of the road been estimated? And the position of the vehicle with respect to center in the lane?
 
-Yes, I have created a method called `measure_curverad` which returns the curverad of the two lanes as well as the current position of the vehicle relative to the left lane.
+Yes, I have created a method called `measure_curverad` which returns the curverad of the two lanes as well as the current position of the vehicle relative to the middle of the lane.
 
 #### 6. Has the result from lane line detection been warped back to the original image space and displayed?
 
@@ -85,7 +85,7 @@ Example output:
 
 You can find the video example of my pipeline output on YouTube:
 
-[![Output example](https://img.youtube.com/vi/yj5rNDESXlU/0.jpg)](https://www.youtube.com/watch?v=yj5rNDESXlU)
+[![Output example](https://img.youtube.com/vi/udPCURqjOdI/0.jpg)](https://www.youtube.com/watch?v=udPCURqjOdI)
 
 The code is available in the [notebook](code.html).
 

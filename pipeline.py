@@ -286,9 +286,13 @@ def measure_curverad(image, left_fitx, right_fitx, ploty):
     ##MEASUREMENT
     y_eval = np.max(ploty)
     ym_per_pix = 30 / 720  # meters per pixel in y dimension
-    xm_per_pix = 3.7 / 700  # meters per pixel in x dimension
+    xm_per_pix = 3.7 / 625  # meters per pixel in x dimension
 
-    position_of_the_car = (image.shape[1] / 2 - left_fitx[0]) * xm_per_pix
+    right_point = right_fitx[len(right_fitx) - 1]
+    left_point = left_fitx[len(left_fitx) - 1]
+    image_center = image.shape[1] / 2
+
+    car_position = (image_center - (right_point - left_point)) * xm_per_pix * 100
 
     # Fit new polynomials to x,y in world space
     left_fit_cr = np.polyfit(ploty * ym_per_pix, left_fitx * xm_per_pix, 2)
@@ -298,8 +302,8 @@ def measure_curverad(image, left_fitx, right_fitx, ploty):
         2 * left_fit_cr[0])
     right_curverad = ((1 + (2 * right_fit_cr[0] * y_eval * ym_per_pix + right_fit_cr[1]) ** 2) ** 1.5) / np.absolute(
         2 * right_fit_cr[0])
-    # Now our radius of curvature is in meters
-    return left_curverad, right_curverad, position_of_the_car
+
+    return left_curverad, right_curverad, car_position
 
 
 def process_image(input_image, sobel_thresh_min = 60, sobel_thresh_max = 100, s_thresh_min = 220, s_thresh_max = 255, force_sliding = False):
