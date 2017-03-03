@@ -85,7 +85,7 @@ Example output:
 
 You can find the video example of my pipeline output on YouTube:
 
-[![Output example](https://img.youtube.com/vi/uN7tmcBJeh8/0.jpg)](https://www.youtube.com/watch?v=uN7tmcBJeh8)
+[![Output example](https://img.youtube.com/vi/yj5rNDESXlU/0.jpg)](https://www.youtube.com/watch?v=yj5rNDESXlU)
 
 The code is available in the [notebook](code.html).
 
